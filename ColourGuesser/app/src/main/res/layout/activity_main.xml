@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/mainColour"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:background="#DDFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/redSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/chosenColour"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainColour" />
+
+    <SeekBar
+        android:id="@+id/greenSeekBar"
+        android:layout_width="256dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/blueSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/redSeekBar"
+        android:layout_width="256dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/greenSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/blueSeekBar"
+        android:layout_width="256dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/guessButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/rLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/r_label"
+        app:layout_constraintBottom_toBottomOf="@+id/redSeekBar"
+        app:layout_constraintEnd_toStartOf="@+id/redSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/redSeekBar" />
+
+    <TextView
+        android:id="@+id/bLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/g_label"
+        app:layout_constraintBottom_toBottomOf="@+id/greenSeekBar"
+        app:layout_constraintEnd_toStartOf="@+id/greenSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/greenSeekBar" />
+
+    <TextView
+        android:id="@+id/gLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/b_label"
+        app:layout_constraintBottom_toBottomOf="@+id/blueSeekBar"
+        app:layout_constraintEnd_toStartOf="@+id/blueSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/blueSeekBar" />
+
+    <TextView
+        android:id="@+id/redValueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/redSeekBar"
+        app:layout_constraintStart_toEndOf="@+id/redSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/redSeekBar" />
+
+    <TextView
+        android:id="@+id/greenValueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/greenSeekBar"
+        app:layout_constraintStart_toEndOf="@+id/greenSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/greenSeekBar" />
+
+    <TextView
+        android:id="@+id/blueValueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/blueSeekBar"
+        app:layout_constraintStart_toEndOf="@+id/blueSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/blueSeekBar" />
+
+    <Button
+        android:id="@+id/guessButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/button_guess"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:enabled="false"
+        android:text="@string/button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

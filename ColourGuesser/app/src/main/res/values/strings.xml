@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ColourGuesser</string>
+    <string name="r_label">R</string>
+    <string name="button_guess">Guess</string>
+    <string name="button_next">Next</string>
+    <string name="g_label">G</string>
+    <string name="b_label">B</string>
+    <string name="colour_shape_desc">ColourShape</string>
+</resources>
